@@ -18,7 +18,7 @@ module.exports = {
       });
     })(req, res, next);
   },
-  status: function(req, res) {
+  status: (req, res) => {
     if (!req.isAuthenticated()) {
       return res.status(200).json({
         status: false
